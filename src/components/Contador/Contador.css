@@ -1,0 +1,18 @@
+.todo{
+    font-size: 5rem;
+    padding: .4em;
+    flex-basis: 50%;
+    color: #fff;
+    background: var(--primary-color);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 1rem 10rem 1rem;
+    cursor: pointer;
+}
+
+.textoContador{
+    background: #414141;
+    margin-bottom: 1rem;
+    cursor: initial;
+}

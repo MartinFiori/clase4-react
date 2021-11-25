@@ -1,5 +1,5 @@
 import React from 'react'
-import './ListCards.css'
+import './ItemListContainer.css'
 import Cards from '../Card/Cards.jsx'
 import Img1 from '../../assets/cards/gatitos.jpg'
 import Img2 from '../../assets/cards/neko.jpg'
@@ -8,7 +8,7 @@ import Img4 from '../../assets/cards/celu.jpg'
 import Img5 from '../../assets/cards/compu.jpg'
 import Img6 from '../../assets/cards/kurama.jpg'
 
-const ListCards = () =>{
+const ItemListContainer = () =>{
     const productos = [
         {
             id: 1,
@@ -61,4 +61,4 @@ const ListCards = () =>{
     )
 }
 
-export default ListCards
+export default ItemListContainer
