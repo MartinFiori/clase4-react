@@ -10,6 +10,7 @@
     border-radius: 5px;
     overflow: hidden;
     transition: transform 250ms ease-in, box-shadow 250ms ease-in-out;
+    margin-inline: auto;
 }
 
 .card:hover{
@@ -53,6 +54,14 @@
 .card__description {
     font-size: 1.6rem;
     padding: 1.5rem;
+    position: relative;
+}
+
+.description--circle{
+    position: absolute;
+    right: 15px;
+    top: -30px;
+    cursor: pointer;
 }
 
 .card__buttons {
@@ -63,7 +72,8 @@
 }
 
 
-.card__buttons--icon {
+.card__buttons--icon,
+.description--circle {
     color: #7c7c7c;
     font-size: 2rem;
     transition: color 150ms ease-out;
@@ -74,7 +84,7 @@
     transform: scale(1.03);
 }
 
-.card__buttons button {
+.card__buttons--buy {
     font-size: 1.6rem;
     padding: .4em;
     flex-basis: 50%;

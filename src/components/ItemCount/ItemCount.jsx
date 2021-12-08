@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import './ItemCount.css'
 import React, { useState } from 'react';
 

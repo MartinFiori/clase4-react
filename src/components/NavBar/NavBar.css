@@ -86,7 +86,7 @@
 .nav__list--container {
     position: fixed;
     top: 60px;
-    left: -400%;
+    left: -600px;
     transition: left 500ms ease;
     z-index: 2;
     width: 500px;

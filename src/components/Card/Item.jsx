@@ -1,7 +1,9 @@
 import React from 'react'
-import './Cards.css'
+import './Item.css'
 
-const Cards =({id, name, price, img, description})=>{
+const Item =({id, name, price, img, description})=>{
+
+    
     return(
         <div className="card">
             <section className="card__header">
@@ -9,9 +11,12 @@ const Cards =({id, name, price, img, description})=>{
                 <p className="card__header--price">${price}</p>
             </section>
             <img className="card__img" src={img} alt={name} />
-            <p className="card__description">{description}</p>
+            <p className="card__description">
+                {description}
+                <i className="fas fa-info-circle description--circle"></i>
+            </p>
             <section className="card__buttons">
-                <button id={id}> Comprar</button>
+                <button id={id} className="card__buttons--buy"> Comprar</button>
                 <div className="card__buttons--container">
                     <i className="far fa-heart card__buttons--icon"></i>
                     <i className="fas fa-share-alt card__buttons--icon"></i>
@@ -21,4 +26,4 @@ const Cards =({id, name, price, img, description})=>{
     )
 }
 
-export default Cards
+export default Item
