@@ -3,6 +3,7 @@ import React from 'react';
 import './NavBar.css';
 import Logo from '../../assets/icon/brillando.png';
 import CartWidget from '../CartWidget/CartWidget.jsx'
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -25,10 +26,14 @@ const NavBar = () => {
                 <div className="navOverlay"></div>
                 <div className="nav__list--container">
                     <ul className="nav__list">
-                        <li className="nav__list--item">Home</li>
-                        <li className="nav__list--item">About Us</li>
-                        <li className="nav__list--item">Favorites</li>
-                        <li className="nav__list--item">Contact Us</li>
+                        <Link to="/">
+                            <li onClick={displayMenu} className="nav__list--item">Inicio</li>
+                        </Link>
+                        <Link to='/products'>
+                            <li onClick={displayMenu} className="nav__list--item">Productos</li>
+                        </Link>
+                        <li onClick={displayMenu} className="nav__list--item">Favoritos</li>
+                        <li onClick={displayMenu} className="nav__list--item">Contacto</li>
                     </ul>
                 </div>
             </nav>

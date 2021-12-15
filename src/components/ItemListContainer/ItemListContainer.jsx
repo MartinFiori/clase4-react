@@ -1,13 +1,13 @@
 import React, { useEffect, useState  } from 'react'
 import './ItemListContainer.css'
-import Item from '../Card/Item.jsx'
+import ItemList from '../ItemList/ItemList.jsx'
 import Img1 from '../../assets/cards/gatitos.jpg'
 import Img2 from '../../assets/cards/neko.jpg'
 import Img3 from '../../assets/cards/auris.jpg'
 import Img4 from '../../assets/cards/celu.jpg'
 import Img5 from '../../assets/cards/compu.jpg'
 import Img6 from '../../assets/cards/kurama.jpg'
-import ClipLoader from "react-spinners/ClipLoader";
+import Pacman from '../Pacman/Pacman.jsx'
 
 
 const ItemListContainer = () =>{
@@ -74,15 +74,19 @@ const ItemListContainer = () =>{
 
 
     return(
-        loading ?
-        <ClipLoader/>
+        <>
+    {        
+    loading ?
+            <Pacman/>
         :
         <div className="cards__container">
             {
-            dataItems.map((prod, index)=> <Item key={index} name={prod.name} price={prod.price} img={prod.img} description={prod.description}/>)
+            dataItems.map((prod, index)=> <ItemList key={index} name={prod.name} price={prod.price} img={prod.img} description={prod.description}/>)
             }
             
         </div>
+        }
+        </>
     )
 }
 
